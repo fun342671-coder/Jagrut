@@ -1,0 +1,174 @@
+{
+  "professions": [
+    {
+      "id": 1,
+      "title": "Software Engineer",
+      "median_wage_current": 60000.0,
+      "median_wage_5yr_ago": 44000.0
+    },
+    {
+      "id": 2,
+      "title": "Data Analyst",
+      "median_wage_current": 45000.0,
+      "median_wage_5yr_ago": 33000.0
+    },
+    {
+      "id": 3,
+      "title": "School Teacher (Private)",
+      "median_wage_current": 18000.0,
+      "median_wage_5yr_ago": 13500.0
+    },
+    {
+      "id": 4,
+      "title": "Government Teacher",
+      "median_wage_current": 50000.0,
+      "median_wage_5yr_ago": 40000.0
+    },
+    {
+      "id": 5,
+      "title": "Doctor (MBBS)",
+      "median_wage_current": 75000.0,
+      "median_wage_5yr_ago": 58000.0
+    },
+    {
+      "id": 6,
+      "title": "Nurse",
+      "median_wage_current": 25000.0,
+      "median_wage_5yr_ago": 18000.0
+    },
+    {
+      "id": 7,
+      "title": "Auto / Taxi Driver",
+      "median_wage_current": 18000.0,
+      "median_wage_5yr_ago": 14000.0
+    },
+    {
+      "id": 8,
+      "title": "Delivery Executive",
+      "median_wage_current": 16000.0,
+      "median_wage_5yr_ago": 12000.0
+    },
+    {
+      "id": 9,
+      "title": "Farm Labourer",
+      "median_wage_current": 9000.0,
+      "median_wage_5yr_ago": 7000.0
+    },
+    {
+      "id": 10,
+      "title": "Accountant",
+      "median_wage_current": 28000.0,
+      "median_wage_5yr_ago": 22000.0
+    },
+    {
+      "id": 11,
+      "title": "Domestic Help (Maid/Cook)",
+      "median_wage_current": 10000.0,
+      "median_wage_5yr_ago": 7500.0
+    },
+    {
+      "id": 12,
+      "title": "Construction Worker",
+      "median_wage_current": 14000.0,
+      "median_wage_5yr_ago": 10500.0
+    },
+    {
+      "id": 13,
+      "title": "Security Guard",
+      "median_wage_current": 13000.0,
+      "median_wage_5yr_ago": 9500.0
+    },
+    {
+      "id": 14,
+      "title": "Retail Shop Assistant",
+      "median_wage_current": 15000.0,
+      "median_wage_5yr_ago": 11000.0
+    },
+    {
+      "id": 15,
+      "title": "Bank Clerk",
+      "median_wage_current": 35000.0,
+      "median_wage_5yr_ago": 28000.0
+    },
+    {
+      "id": 16,
+      "title": "Sanitation Worker",
+      "median_wage_current": 12000.0,
+      "median_wage_5yr_ago": 9000.0
+    },
+    {
+      "id": 17,
+      "title": "Policeman / Constable",
+      "median_wage_current": 40000.0,
+      "median_wage_5yr_ago": 32000.0
+    },
+    {
+      "id": 18,
+      "title": "Street Vendor",
+      "median_wage_current": 15000.0,
+      "median_wage_5yr_ago": 11500.0
+    },
+    {
+      "id": 19,
+      "title": "Electrician / Plumber",
+      "median_wage_current": 18000.0,
+      "median_wage_5yr_ago": 13500.0
+    },
+    {
+      "id": 20,
+      "title": "College Professor",
+      "median_wage_current": 70000.0,
+      "median_wage_5yr_ago": 55000.0
+    }
+  ],
+  "constituencies": [
+    {
+      "id": 1,
+      "name": "Mumbai South"
+    },
+    {
+      "id": 2,
+      "name": "Mumbai North"
+    },
+    {
+      "id": 3,
+      "name": "Bangalore South"
+    },
+    {
+      "id": 4,
+      "name": "New Delhi"
+    },
+    {
+      "id": 5,
+      "name": "Hyderabad"
+    },
+    {
+      "id": 6,
+      "name": "Pune"
+    },
+    {
+      "id": 7,
+      "name": "Chennai South"
+    },
+    {
+      "id": 8,
+      "name": "Kolkata South"
+    },
+    {
+      "id": 9,
+      "name": "Lucknow"
+    },
+    {
+      "id": 10,
+      "name": "Ahmedabad East"
+    },
+    {
+      "id": 11,
+      "name": "Bangalore North"
+    },
+    {
+      "id": 12,
+      "name": "Ahmedabad West"
+    }
+  ]
+}

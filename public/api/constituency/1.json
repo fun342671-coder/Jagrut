@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "name": "Mumbai South",
+  "type": "LokSabha",
+  "voting_population": 1780000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 18.5,
+  "mplads_unutilized_crores": 6.5,
+  "central_allocated_crores": 110.0,
+  "central_utilized_crores": 85.0,
+  "central_unutilized_crores": 25.0,
+  "state_allocated_crores": 150.0,
+  "state_utilized_crores": 106.5,
+  "state_unutilized_crores": 43.5,
+  "total_budget_allocated_crores": 285.0,
+  "total_budget_utilized_crores": 210.0,
+  "budget_utilization_pct": 73.7,
+  "audit_discrepancy_crores": 12.5,
+  "audit_notes": "CAG flagged Rs.12.5 Cr irregularities in PMAY-U housing diversion in Mumbai South.",
+  "representative": {
+    "constituency_id": 1,
+    "rep_name": "Arvind Sawant",
+    "party": "Shiv Sena (UBT)",
+    "declared_assets_current_cr": 4.8,
+    "declared_assets_previous_cr": 2.4,
+    "pending_criminal_cases": 1,
+    "affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=888",
+    "verified_by_consensus": true
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "constituency_id": 1,
+    "rep_name": "Arvind Sawant",
+    "party": "Shiv Sena (UBT)",
+    "declared_assets_current_cr": 4.80,
+    "declared_assets_previous_cr": 2.40,
+    "pending_criminal_cases": 1,
+    "affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=888",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 2,
+    "rep_name": "Piyush Goyal",
+    "party": "BJP",
+    "declared_assets_current_cr": 110.18,
+    "declared_assets_previous_cr": 95.00,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=5322",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 3,
+    "rep_name": "Tejasvi Surya",
+    "party": "BJP",
+    "declared_assets_current_cr": 4.10,
+    "declared_assets_previous_cr": 0.13,
+    "pending_criminal_cases": 3,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6486",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 4,
+    "rep_name": "Bansuri Swaraj",
+    "party": "BJP",
+    "declared_assets_current_cr": 19.00,
+    "declared_assets_previous_cr": 11.00,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4590",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 5,
+    "rep_name": "Asaduddin Owaisi",
+    "party": "AIMIM",
+    "declared_assets_current_cr": 23.87,
+    "declared_assets_previous_cr": 13.00,
+    "pending_criminal_cases": 5,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6369",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 6,
+    "rep_name": "Murlidhar Mohol",
+    "party": "BJP",
+    "declared_assets_current_cr": 23.50,
+    "declared_assets_previous_cr": 12.00,
+    "pending_criminal_cases": 1,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=14168",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 7,
+    "rep_name": "Thamizhachi Thangapandian",
+    "party": "DMK",
+    "declared_assets_current_cr": 15.60,
+    "declared_assets_previous_cr": 8.50,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=1138",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 8,
+    "rep_name": "Mala Roy",
+    "party": "AITC",
+    "declared_assets_current_cr": 3.25,
+    "declared_assets_previous_cr": 2.10,
+    "pending_criminal_cases": 1,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=3145",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 9,
+    "rep_name": "Rajnath Singh",
+    "party": "BJP",
+    "declared_assets_current_cr": 6.40,
+    "declared_assets_previous_cr": 5.30,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4480",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 10,
+    "rep_name": "Hasmukhbhai Patel",
+    "party": "BJP",
+    "declared_assets_current_cr": 11.69,
+    "declared_assets_previous_cr": 7.42,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4747",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 11,
+    "rep_name": "Shobha Karandlaje",
+    "party": "BJP",
+    "declared_assets_current_cr": 13.80,
+    "declared_assets_previous_cr": 10.40,
+    "pending_criminal_cases": 2,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6212",
+    "verified_by_consensus": true
+  },
+  {
+    "constituency_id": 12,
+    "rep_name": "Dineshchandra Anavadiya",
+    "party": "BJP",
+    "declared_assets_current_cr": 5.80,
+    "declared_assets_previous_cr": 3.90,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4842",
+    "verified_by_consensus": true
+  }
+]

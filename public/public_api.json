@@ -1,0 +1,197 @@
+{
+  "professions": [
+    {
+      "id": 1,
+      "title": "Software Engineer",
+      "median_wage_current": 480.0,
+      "median_wage_5yr_ago": 350.0
+    },
+    {
+      "id": 2,
+      "title": "Data Analyst",
+      "median_wage_current": 350.0,
+      "median_wage_5yr_ago": 260.0
+    },
+    {
+      "id": 3,
+      "title": "School Teacher (Private)",
+      "median_wage_current": 120.0,
+      "median_wage_5yr_ago": 90.0
+    },
+    {
+      "id": 4,
+      "title": "Government Teacher",
+      "median_wage_current": 225.0,
+      "median_wage_5yr_ago": 195.0
+    },
+    {
+      "id": 5,
+      "title": "Doctor (MBBS)",
+      "median_wage_current": 375.0,
+      "median_wage_5yr_ago": 290.0
+    },
+    {
+      "id": 6,
+      "title": "Nurse",
+      "median_wage_current": 140.0,
+      "median_wage_5yr_ago": 105.0
+    },
+    {
+      "id": 7,
+      "title": "Auto / Taxi Driver",
+      "median_wage_current": 85.0,
+      "median_wage_5yr_ago": 65.0
+    },
+    {
+      "id": 8,
+      "title": "Delivery Executive",
+      "median_wage_current": 75.0,
+      "median_wage_5yr_ago": 45.0
+    },
+    {
+      "id": 9,
+      "title": "Farm Labourer",
+      "median_wage_current": 50.0,
+      "median_wage_5yr_ago": 35.0
+    },
+    {
+      "id": 10,
+      "title": "Accountant",
+      "median_wage_current": 175.0,
+      "median_wage_5yr_ago": 135.0
+    }
+  ],
+  "constituencies": [
+    {
+      "id": 1,
+      "name": "Mumbai South",
+      "type": "LokSabha",
+      "voting_population": 1780000,
+      "mplads_allocated_crores": 25.0,
+      "mplads_utilized_crores": 18.5,
+      "mplads_unutilized_crores": 6.5,
+      "total_budget_allocated_crores": 285.0,
+      "total_budget_utilized_crores": 210.0,
+      "budget_utilization_pct": 73.7,
+      "audit_discrepancy_crores": 12.5,
+      "audit_notes": "CAG flagged Rs.12.5 Cr irregularities in PMAY-U.",
+      "representative": {
+        "constituency_id": 1,
+        "rep_name": "Arvind Sawant",
+        "declared_assets_current_cr": 4.8,
+        "declared_assets_previous_cr": 2.4,
+        "pending_criminal_cases": 1,
+        "affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=888",
+        "verified_by_consensus": true
+      }
+    },
+    {
+      "id": 2,
+      "name": "Mumbai North",
+      "type": "LokSabha",
+      "voting_population": 1950000,
+      "mplads_allocated_crores": 25.0,
+      "mplads_utilized_crores": 21.0,
+      "mplads_unutilized_crores": 4.0,
+      "total_budget_allocated_crores": 310.0,
+      "total_budget_utilized_crores": 245.0,
+      "budget_utilization_pct": 79.0,
+      "audit_discrepancy_crores": 8.3,
+      "audit_notes": "Rs.8.3 Cr in PMAY-U construction delays.",
+      "representative": null
+    },
+    {
+      "id": 10,
+      "name": "Ahmedabad East",
+      "type": "LokSabha",
+      "voting_population": 1750000,
+      "mplads_allocated_crores": 25.0,
+      "mplads_utilized_crores": 12.0,
+      "mplads_unutilized_crores": 13.0,
+      "total_budget_allocated_crores": 295.0,
+      "total_budget_utilized_crores": 178.0,
+      "budget_utilization_pct": 60.3,
+      "audit_discrepancy_crores": 28.0,
+      "audit_notes": "Gujarat among highest unspent MPLADS nationally.",
+      "representative": null
+    }
+  ],
+  "commodities": [
+    {
+      "id": 1,
+      "name": "Rice (1 kg)",
+      "category": "Grains & Cereals",
+      "price_current": 44.38,
+      "price_5yr_ago": 34.0,
+      "price_marketplace": 55.0
+    },
+    {
+      "id": 2,
+      "name": "Wheat (1 kg)",
+      "category": "Grains & Cereals",
+      "price_current": 31.27,
+      "price_5yr_ago": 24.5,
+      "price_marketplace": 38.0
+    },
+    {
+      "id": 3,
+      "name": "Toor Dal (1 kg)",
+      "category": "Pulses",
+      "price_current": 145.0,
+      "price_5yr_ago": 95.0,
+      "price_marketplace": 155.0
+    },
+    {
+      "id": 12,
+      "name": "Milk (1 L)",
+      "category": "Dairy & Protein",
+      "price_current": 60.77,
+      "price_5yr_ago": 44.0,
+      "price_marketplace": 64.0
+    },
+    {
+      "id": 14,
+      "name": "Chicken (1 kg)",
+      "category": "Dairy & Protein",
+      "price_current": 220.0,
+      "price_5yr_ago": 160.0,
+      "price_marketplace": 260.0
+    },
+    {
+      "id": 20,
+      "name": "Potato (1 kg)",
+      "category": "Vegetables",
+      "price_current": 30.0,
+      "price_5yr_ago": 20.0,
+      "price_marketplace": 38.0
+    },
+    {
+      "id": 21,
+      "name": "Petrol (1 L)",
+      "category": "Fuel & Energy",
+      "price_current": 105.0,
+      "price_5yr_ago": 73.0,
+      "price_marketplace": 108.0
+    },
+    {
+      "id": 22,
+      "name": "LPG Cylinder (14.2 kg)",
+      "category": "Fuel & Energy",
+      "price_current": 942.0,
+      "price_5yr_ago": 594.0,
+      "price_marketplace": 942.0
+    },
+    {
+      "id": 25,
+      "name": "Rent - 1BHK Urban (monthly)",
+      "category": "Utilities & Housing",
+      "price_current": 12000.0,
+      "price_5yr_ago": 7500.0,
+      "price_marketplace": 14000.0
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "description": "Static API for Jagrut (Robin Hood Architecture)"
+  }
+}

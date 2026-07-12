@@ -1,0 +1,30 @@
+{
+  "id": 9,
+  "name": "Lucknow",
+  "type": "LokSabha",
+  "voting_population": 1800000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 22.0,
+  "mplads_unutilized_crores": 3.0,
+  "central_allocated_crores": 140.0,
+  "central_utilized_crores": 112.0,
+  "central_unutilized_crores": 28.0,
+  "state_allocated_crores": 165.0,
+  "state_utilized_crores": 131.0,
+  "state_unutilized_crores": 34.0,
+  "total_budget_allocated_crores": 330.0,
+  "total_budget_utilized_crores": 265.0,
+  "budget_utilization_pct": 80.3,
+  "audit_discrepancy_crores": 7.5,
+  "audit_notes": "CAG reported Rs.7.5 Cr discrepancies in rural road expansion works in Lucknow.",
+  "representative": {
+    "constituency_id": 9,
+    "rep_name": "Rajnath Singh",
+    "party": "BJP",
+    "declared_assets_current_cr": 6.4,
+    "declared_assets_previous_cr": 5.3,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4480",
+    "verified_by_consensus": true
+  }
+}

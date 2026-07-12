@@ -1,0 +1,30 @@
+{
+  "id": 2,
+  "name": "Mumbai North",
+  "type": "LokSabha",
+  "voting_population": 1950000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 21.0,
+  "mplads_unutilized_crores": 4.0,
+  "central_allocated_crores": 125.0,
+  "central_utilized_crores": 98.0,
+  "central_unutilized_crores": 27.0,
+  "state_allocated_crores": 160.0,
+  "state_utilized_crores": 126.0,
+  "state_unutilized_crores": 34.0,
+  "total_budget_allocated_crores": 310.0,
+  "total_budget_utilized_crores": 245.0,
+  "budget_utilization_pct": 79.0,
+  "audit_discrepancy_crores": 8.3,
+  "audit_notes": "Rs.8.3 Cr PMAY-U construction delays and material price inflation in Mumbai North.",
+  "representative": {
+    "constituency_id": 2,
+    "rep_name": "Piyush Goyal",
+    "party": "BJP",
+    "declared_assets_current_cr": 110.18,
+    "declared_assets_previous_cr": 95.0,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=5322",
+    "verified_by_consensus": true
+  }
+}

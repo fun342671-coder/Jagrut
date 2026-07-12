@@ -1,0 +1,56 @@
+name: Daily Static Data Build
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: |
+          pip install python-telegram-bot pytesseract Pillow
+
+      - name: Run Telegram Ingestion (OCR & Consensus)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          python data_pipeline/telegram_ingest.py
+
+      - name: Build Static API
+        run: |
+          python data_pipeline/build_data.py
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Frontend Dependencies
+        working-directory: ./frontend
+        run: npm install
+
+      - name: Build Frontend (Expo Web)
+        working-directory: ./frontend
+        run: npx expo export
+
+      - name: Prepare Final Public Directory
+        run: |
+          cp -r ./frontend/dist/* ./public/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
