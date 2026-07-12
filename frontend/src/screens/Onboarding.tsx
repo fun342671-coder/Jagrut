@@ -159,7 +159,7 @@ export default function OnboardingScreen({ navigation }: OnboardingProps) {
                 >
                   <Text style={styles.modalItemText}>{item.title}</Text>
                   <Text style={styles.modalItemSubtext}>
-                    Daily wage: Rs.{item.median_wage_current} (Prev: Rs.{item.median_wage_5yr_ago})
+                    Monthly Median Wage: Rs.{item.median_wage_current} (Prev: Rs.{item.median_wage_5yr_ago})
                   </Text>
                 </TouchableOpacity>
               )}
