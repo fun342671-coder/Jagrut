@@ -1,0 +1,30 @@
+{
+  "id": 3,
+  "name": "Bangalore South",
+  "type": "LokSabha",
+  "voting_population": 2200000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 16.0,
+  "mplads_unutilized_crores": 9.0,
+  "central_allocated_crores": 135.0,
+  "central_utilized_crores": 94.0,
+  "central_unutilized_crores": 41.0,
+  "state_allocated_crores": 180.0,
+  "state_utilized_crores": 120.0,
+  "state_unutilized_crores": 60.0,
+  "total_budget_allocated_crores": 340.0,
+  "total_budget_utilized_crores": 230.0,
+  "budget_utilization_pct": 67.6,
+  "audit_discrepancy_crores": 14.2,
+  "audit_notes": "Audit flagged irregularities in BBMP drainage road-repair contracts in Bangalore South.",
+  "representative": {
+    "constituency_id": 3,
+    "rep_name": "Tejasvi Surya",
+    "party": "BJP",
+    "declared_assets_current_cr": 4.1,
+    "declared_assets_previous_cr": 0.13,
+    "pending_criminal_cases": 3,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6486",
+    "verified_by_consensus": true
+  }
+}

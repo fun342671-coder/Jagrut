@@ -371,7 +371,7 @@ def build_api():
 
     for api_dir in api_dirs:
         api_dir.mkdir(parents=True, exist_ok=True)
-        constituency_dir = api_dir / "constituency"
+        constituency_dir = api_dir / "constituencies"
         constituency_dir.mkdir(parents=True, exist_ok=True)
 
         # 1. manifest.json
@@ -386,9 +386,9 @@ def build_api():
         with open(api_dir / "commodities.json", "w", encoding="utf-8") as f:
             json.dump(COMMODITIES, f, indent=2)
 
-        # 3. constituency/{constituency_id}.json
+        # 3. constituencies/c_{id}.json
         for c in CONSTITUENCIES:
-            with open(constituency_dir / f"{c['id']}.json", "w", encoding="utf-8") as f:
+            with open(constituency_dir / f"c_{c['id']}.json", "w", encoding="utf-8") as f:
                 json.dump(c, f, indent=2)
 
     print("Generated API directory trees in both public/api and frontend/public/api successfully.")

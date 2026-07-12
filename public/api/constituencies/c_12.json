@@ -1,0 +1,30 @@
+{
+  "id": 12,
+  "name": "Ahmedabad West",
+  "type": "LokSabha",
+  "voting_population": 1700000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 16.5,
+  "mplads_unutilized_crores": 8.5,
+  "central_allocated_crores": 115.0,
+  "central_utilized_crores": 85.0,
+  "central_unutilized_crores": 30.0,
+  "state_allocated_crores": 140.0,
+  "state_utilized_crores": 98.5,
+  "state_unutilized_crores": 41.5,
+  "total_budget_allocated_crores": 280.0,
+  "total_budget_utilized_crores": 200.0,
+  "budget_utilization_pct": 71.4,
+  "audit_discrepancy_crores": 18.2,
+  "audit_notes": "Audit noted diversion of municipal funds for private water tanker operations in Ahmedabad West.",
+  "representative": {
+    "constituency_id": 12,
+    "rep_name": "Dineshchandra Anavadiya",
+    "party": "BJP",
+    "declared_assets_current_cr": 5.8,
+    "declared_assets_previous_cr": 3.9,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4842",
+    "verified_by_consensus": true
+  }
+}

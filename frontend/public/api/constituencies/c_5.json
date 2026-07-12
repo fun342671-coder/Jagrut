@@ -1,0 +1,30 @@
+{
+  "id": 5,
+  "name": "Hyderabad",
+  "type": "LokSabha",
+  "voting_population": 2100000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 11.5,
+  "mplads_unutilized_crores": 13.5,
+  "central_allocated_crores": 130.0,
+  "central_utilized_crores": 83.5,
+  "central_unutilized_crores": 46.5,
+  "state_allocated_crores": 170.0,
+  "state_utilized_crores": 100.0,
+  "state_unutilized_crores": 70.0,
+  "total_budget_allocated_crores": 325.0,
+  "total_budget_utilized_crores": 195.0,
+  "budget_utilization_pct": 60.0,
+  "audit_discrepancy_crores": 24.5,
+  "audit_notes": "Severe under-utilization of water drainage and sanitation project budgets in Hyderabad.",
+  "representative": {
+    "constituency_id": 5,
+    "rep_name": "Asaduddin Owaisi",
+    "party": "AIMIM",
+    "declared_assets_current_cr": 23.87,
+    "declared_assets_previous_cr": 13.0,
+    "pending_criminal_cases": 5,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6369",
+    "verified_by_consensus": true
+  }
+}

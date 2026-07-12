@@ -34,6 +34,14 @@ jobs:
         run: |
           python data_pipeline/build_data.py
 
+      - name: Commit Updated Registry
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data_pipeline/pending_registry.json data_pipeline/representatives.json
+          git commit -m "chore: update consensus registry and reps data" || echo "No changes to commit"
+          git push origin main
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:

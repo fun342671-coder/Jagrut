@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getAnonymousUUID } from '../api/client';
 
-export const API_BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:8081' : '.';
+export const API_BASE_URL = 'https://fun342671-coder.github.io/Jagrut';
 
 export interface Profession {
   id: number;
@@ -286,7 +286,7 @@ export const useAppStore = create<AppState>((set, get) => {
       set({ constituencyId: id, loadingConstituency: true, errorConstituency: null });
 
       try {
-        const response = await fetch(`${API_BASE_URL}/api/constituency/${id}.json`);
+        const response = await fetch(`${API_BASE_URL}/api/constituencies/c_${id}.json`);
         if (!response.ok) throw new Error(`Failed to fetch details for constituency ID ${id}`);
         const data = await response.json();
         

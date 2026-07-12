@@ -1,0 +1,30 @@
+{
+  "id": 6,
+  "name": "Pune",
+  "type": "LokSabha",
+  "voting_population": 1850000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 17.5,
+  "mplads_unutilized_crores": 7.5,
+  "central_allocated_crores": 120.0,
+  "central_utilized_crores": 90.0,
+  "central_unutilized_crores": 30.0,
+  "state_allocated_crores": 145.0,
+  "state_utilized_crores": 102.5,
+  "state_unutilized_crores": 42.5,
+  "total_budget_allocated_crores": 290.0,
+  "total_budget_utilized_crores": 210.0,
+  "budget_utilization_pct": 72.4,
+  "audit_discrepancy_crores": 11.2,
+  "audit_notes": "CAG flagged Rs.11.2 Cr discrepancies in Smart City road expansions in Pune.",
+  "representative": {
+    "constituency_id": 6,
+    "rep_name": "Murlidhar Mohol",
+    "party": "BJP",
+    "declared_assets_current_cr": 23.5,
+    "declared_assets_previous_cr": 12.0,
+    "pending_criminal_cases": 1,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=14168",
+    "verified_by_consensus": true
+  }
+}

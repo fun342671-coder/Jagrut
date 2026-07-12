@@ -1,0 +1,30 @@
+{
+  "id": 7,
+  "name": "Chennai South",
+  "type": "LokSabha",
+  "voting_population": 2050000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 20.0,
+  "mplads_unutilized_crores": 5.0,
+  "central_allocated_crores": 115.0,
+  "central_utilized_crores": 91.0,
+  "central_unutilized_crores": 24.0,
+  "state_allocated_crores": 140.0,
+  "state_utilized_crores": 114.0,
+  "state_unutilized_crores": 26.0,
+  "total_budget_allocated_crores": 280.0,
+  "total_budget_utilized_crores": 225.0,
+  "budget_utilization_pct": 80.4,
+  "audit_discrepancy_crores": 9.4,
+  "audit_notes": "CAG flagged Rs.9.4 Cr discrepancies in coastal storm water drain projects in Chennai.",
+  "representative": {
+    "constituency_id": 7,
+    "rep_name": "Thamizhachi Thangapandian",
+    "party": "DMK",
+    "declared_assets_current_cr": 15.6,
+    "declared_assets_previous_cr": 8.5,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=1138",
+    "verified_by_consensus": true
+  }
+}

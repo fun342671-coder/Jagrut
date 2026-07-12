@@ -311,32 +311,29 @@ export default function UploadAffidavitScreen({ navigation, route }: UploadAffid
           )}
         </View>
 
-        {/* Step 2: Upload File Component */}
+        {/* Step 2: Telegram Deep Link Handoff */}
         <View style={styles.uploadBox}>
-          <Text style={styles.uploadTitle}>SELECT DOCUMENT SOURCE</Text>
+          <Text style={styles.uploadTitle}>SECURE DOCUMENT INGESTION</Text>
           
-          {!selectedFile ? (
-            <TouchableOpacity style={styles.fileDropzone} onPress={handleSimulateUpload}>
-              <Text style={styles.uploadIcon}>⬆</Text>
-              <Text style={styles.uploadMainText}>Tap to Select PDF or Image File</Text>
-              <Text style={styles.uploadSubtext}>Supports affidavits, grocery bills, audit statements</Text>
-            </TouchableOpacity>
-          ) : (
-            <View style={styles.fileStatusContainer}>
-              <Text style={styles.fileName}>{selectedFile}</Text>
-              {isParsing ? (
-                <View style={styles.parsingRow}>
-                  <ActivityIndicator size="small" color={Theme.colors.primary} />
-                  <Text style={styles.parsingText}>Running local table-aware OCR parsing...</Text>
-                </View>
-              ) : (
-                <View style={styles.successRow}>
-                  <Text style={styles.successIcon}>✓</Text>
-                  <Text style={styles.successText}>OCR extraction complete. Review data below.</Text>
-                </View>
-              )}
-            </View>
-          )}
+          <TouchableOpacity 
+            style={styles.fileDropzone} 
+            onPress={() => {
+              const telegramUrl = `tg://resolve?domain=JagrutBot&start=c_${selectedCid}`;
+              import('react-native').then(({ Linking }) => {
+                Linking.openURL(telegramUrl).catch(() => {
+                  Linking.openURL(`https://t.me/JagrutBot?start=c_${selectedCid}`);
+                });
+              });
+            }}
+          >
+            <Text style={styles.uploadIcon}>🚀</Text>
+            <Text style={styles.uploadMainText}>Submit via Secure Telegram Bot</Text>
+            <Text style={styles.uploadSubtext}>Opens Telegram directly with your constituency pre-loaded.</Text>
+          </TouchableOpacity>
+          
+          <Text style={{...Theme.typography.caption, marginTop: Theme.spacing.s, color: Theme.colors.textSecondary, textAlign: 'center', textTransform: 'none'}}>
+            Fallback link: https://t.me/JagrutBot?start=c_{selectedCid}
+          </Text>
         </View>
 
         {/* Step 3: Verified Data Inputs (Appears after mock parsing) */}

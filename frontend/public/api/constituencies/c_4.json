@@ -1,0 +1,30 @@
+{
+  "id": 4,
+  "name": "New Delhi",
+  "type": "LokSabha",
+  "voting_population": 1650000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 19.5,
+  "mplads_unutilized_crores": 5.5,
+  "central_allocated_crores": 115.0,
+  "central_utilized_crores": 92.0,
+  "central_unutilized_crores": 23.0,
+  "state_allocated_crores": 150.0,
+  "state_utilized_crores": 108.5,
+  "state_unutilized_crores": 41.5,
+  "total_budget_allocated_crores": 290.0,
+  "total_budget_utilized_crores": 220.0,
+  "budget_utilization_pct": 75.9,
+  "audit_discrepancy_crores": 6.8,
+  "audit_notes": "CAG report highlighted delays in school infrastructure expansion funds in New Delhi.",
+  "representative": {
+    "constituency_id": 4,
+    "rep_name": "Bansuri Swaraj",
+    "party": "BJP",
+    "declared_assets_current_cr": 19.0,
+    "declared_assets_previous_cr": 11.0,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4590",
+    "verified_by_consensus": true
+  }
+}
