@@ -23,6 +23,14 @@ from telegram import Bot
 import pytesseract
 from PIL import Image
 
+# Extract the updated environment variable
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_UPLOAD_BOT_TOKEN')
+
+if not TELEGRAM_BOT_TOKEN:
+    print("CRITICAL ERROR: TELEGRAM_UPLOAD_BOT_TOKEN environment variable is missing.")
+    sys.exit(1)
+
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -95,9 +103,9 @@ def structural_parse(text_data) -> float | None:
 
 
 async def process_updates():
-    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    token = os.getenv("TELEGRAM_UPLOAD_BOT_TOKEN")
     if not token:
-        logger.warning("TELEGRAM_BOT_TOKEN not set. Skipping ingestion.")
+        logger.warning("TELEGRAM_UPLOAD_BOT_TOKEN not set. Skipping ingestion.")
         return
 
     registry = load_registry()

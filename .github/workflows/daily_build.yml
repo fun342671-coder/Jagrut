@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Telegram Ingestion (OCR & Consensus)
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_UPLOAD_BOT_TOKEN: ${{ secrets.TELEGRAM_UPLOAD_BOT_TOKEN }}
         run: |
           python data_pipeline/telegram_ingest.py
 
