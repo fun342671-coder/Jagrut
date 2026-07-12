@@ -1,0 +1,30 @@
+{
+  "id": 11,
+  "name": "Bangalore North",
+  "type": "LokSabha",
+  "voting_population": 2300000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 18.0,
+  "mplads_unutilized_crores": 7.0,
+  "central_allocated_crores": 140.0,
+  "central_utilized_crores": 105.0,
+  "central_unutilized_crores": 35.0,
+  "state_allocated_crores": 185.0,
+  "state_utilized_crores": 122.0,
+  "state_unutilized_crores": 63.0,
+  "total_budget_allocated_crores": 350.0,
+  "total_budget_utilized_crores": 245.0,
+  "budget_utilization_pct": 70.0,
+  "audit_discrepancy_crores": 15.5,
+  "audit_notes": "Audit reports flagged discrepancies in flyover construction budgets and delays in Bangalore North.",
+  "representative": {
+    "constituency_id": 11,
+    "rep_name": "Shobha Karandlaje",
+    "party": "BJP",
+    "declared_assets_current_cr": 13.8,
+    "declared_assets_previous_cr": 10.4,
+    "pending_criminal_cases": 2,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6212",
+    "verified_by_consensus": true
+  }
+}

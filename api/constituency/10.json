@@ -1,0 +1,30 @@
+{
+  "id": 10,
+  "name": "Ahmedabad East",
+  "type": "LokSabha",
+  "voting_population": 1750000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 12.0,
+  "mplads_unutilized_crores": 13.0,
+  "central_allocated_crores": 120.0,
+  "central_utilized_crores": 75.0,
+  "central_unutilized_crores": 45.0,
+  "state_allocated_crores": 150.0,
+  "state_utilized_crores": 91.0,
+  "state_unutilized_crores": 59.0,
+  "total_budget_allocated_crores": 295.0,
+  "total_budget_utilized_crores": 178.0,
+  "budget_utilization_pct": 60.3,
+  "audit_discrepancy_crores": 28.0,
+  "audit_notes": "Gujarat among highest unspent MPLADS nationally; CAG flags canal repair delay in Ahmedabad East.",
+  "representative": {
+    "constituency_id": 10,
+    "rep_name": "Hasmukhbhai Patel",
+    "party": "BJP",
+    "declared_assets_current_cr": 11.69,
+    "declared_assets_previous_cr": 7.42,
+    "pending_criminal_cases": 0,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4747",
+    "verified_by_consensus": true
+  }
+}
