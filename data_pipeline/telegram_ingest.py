@@ -16,6 +16,7 @@ import asyncio
 import logging
 import hashlib
 import time
+import sys
 from pathlib import Path
 from collections import defaultdict
 
@@ -130,8 +131,6 @@ async def process_updates():
         evaluate_consensus(registry)
         return
 
-    now = time.time()
-    twenty_four_hours_ago = now - 24 * 3600
     last_run_timestamp = registry["last_run_timestamp"]
 
     last_update_id = 0
@@ -162,9 +161,6 @@ async def process_updates():
 
         # Parse image messages
         if update.message.photo:
-            # Check if this message was already processed or is older than 24 hours
-            if msg_time < twenty_four_hours_ago or msg_time <= last_run_timestamp:
-                continue
 
             # Identify the constituency
             # Priority 1: Stored user constituency from deep link
