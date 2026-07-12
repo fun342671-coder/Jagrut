@@ -1,0 +1,30 @@
+{
+  "id": 8,
+  "name": "Kolkata South",
+  "type": "LokSabha",
+  "voting_population": 1900000,
+  "mplads_allocated_crores": 25.0,
+  "mplads_utilized_crores": 14.5,
+  "mplads_unutilized_crores": 10.5,
+  "central_allocated_crores": 105.0,
+  "central_utilized_crores": 73.0,
+  "central_unutilized_crores": 32.0,
+  "state_allocated_crores": 130.0,
+  "state_utilized_crores": 92.5,
+  "state_unutilized_crores": 37.5,
+  "total_budget_allocated_crores": 260.0,
+  "total_budget_utilized_crores": 180.0,
+  "budget_utilization_pct": 69.2,
+  "audit_discrepancy_crores": 16.8,
+  "audit_notes": "CAG audit noted discrepancies in Ganga cleanup project funds at ward levels in Kolkata.",
+  "representative": {
+    "constituency_id": 8,
+    "rep_name": "Mala Roy",
+    "party": "AITC",
+    "declared_assets_current_cr": 3.25,
+    "declared_assets_previous_cr": 2.1,
+    "pending_criminal_cases": 1,
+    "affidavit_url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=3145",
+    "verified_by_consensus": true
+  }
+}
