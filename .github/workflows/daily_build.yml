@@ -1,6 +1,9 @@
 name: Daily Static Data Build
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch: # Allow manual trigger
