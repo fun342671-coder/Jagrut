@@ -216,52 +216,76 @@ export const useAppStore = create<AppState>((set, get) => {
           console.warn("Failed to load local overrides:", err);
         }
 
-        // 3. Fetch manifest and commodities
+        // 3. Hydrate from Cache First
         let manifestData = null;
         let commoditiesData = null;
 
         try {
-          const manifestRes = await fetch(`${API_BASE_URL}/api/manifest.json`);
-          if (!manifestRes.ok) throw new Error('Manifest fetch failed');
-          manifestData = await manifestRes.json();
-          await AsyncStorage.setItem('@jagrut_manifest_cache', JSON.stringify(manifestData));
-        } catch (err) {
-          console.warn("Using cached manifest due to fetch failure:", err);
           const cachedManifest = await AsyncStorage.getItem('@jagrut_manifest_cache');
-          if (cachedManifest) manifestData = JSON.parse(cachedManifest);
-        }
-
-        try {
-          const commoditiesRes = await fetch(`${API_BASE_URL}/api/commodities.json`);
-          if (!commoditiesRes.ok) throw new Error('Commodities fetch failed');
-          commoditiesData = await commoditiesRes.json();
-          await AsyncStorage.setItem('@jagrut_commodities_cache', JSON.stringify(commoditiesData));
-        } catch (err) {
-          console.warn("Using cached commodities due to fetch failure:", err);
-          const cachedCommodities = await AsyncStorage.getItem('@jagrut_commodities_cache');
-          if (cachedCommodities) commoditiesData = JSON.parse(cachedCommodities);
-        }
-
-        if (manifestData) {
-          set({
-            professions: manifestData.professions || [],
-            constituencies: manifestData.constituencies || []
-          });
-        }
-
-        if (commoditiesData) {
-          set({ rawCommodities: commoditiesData });
+          if (cachedManifest) {
+            manifestData = JSON.parse(cachedManifest);
+            set({
+              professions: manifestData.professions || [],
+              constituencies: manifestData.constituencies || []
+            });
+          }
           
-          // Apply overrides
-          const merged = applyAllOverrides(
-            commoditiesData,
-            null,
-            priceOverrides,
-            affidavitOverrides,
-            auditOverrides
-          );
-          set({ commodities: merged.commodities });
+          const cachedCommodities = await AsyncStorage.getItem('@jagrut_commodities_cache');
+          if (cachedCommodities) {
+            commoditiesData = JSON.parse(cachedCommodities);
+            set({ rawCommodities: commoditiesData });
+            const merged = applyAllOverrides(
+              commoditiesData,
+              null,
+              priceOverrides,
+              affidavitOverrides,
+              auditOverrides
+            );
+            set({ commodities: merged.commodities });
+          }
+          
+          if (manifestData && commoditiesData) {
+            set({ isLoading: false });
+          }
+        } catch (err) {
+          console.warn("Failed to load initial cache:", err);
         }
+
+        // 4. Background Network Validation
+        (async () => {
+          try {
+            const manifestRes = await fetch(`${API_BASE_URL}/api/manifest.json`);
+            if (manifestRes.ok) {
+              const remoteManifest = await manifestRes.json();
+              if (!manifestData || remoteManifest.revised_timestamp > (manifestData.revised_timestamp || 0)) {
+                await AsyncStorage.setItem('@jagrut_manifest_cache', JSON.stringify(remoteManifest));
+                set({
+                  professions: remoteManifest.professions || [],
+                  constituencies: remoteManifest.constituencies || []
+                });
+
+                const commoditiesRes = await fetch(`${API_BASE_URL}/api/commodities.json`);
+                if (commoditiesRes.ok) {
+                  const remoteCommodities = await commoditiesRes.json();
+                  await AsyncStorage.setItem('@jagrut_commodities_cache', JSON.stringify(remoteCommodities));
+                  set({ rawCommodities: remoteCommodities });
+                  const merged = applyAllOverrides(
+                    remoteCommodities,
+                    get().rawConstituencyDetails,
+                    get().localPriceOverrides,
+                    get().localAffidavitOverrides,
+                    get().localAuditOverrides
+                  );
+                  set({ commodities: merged.commodities });
+                }
+              }
+            }
+          } catch (err) {
+            console.warn("Background validation failed:", err);
+          } finally {
+            set({ isLoading: false });
+          }
+        })();
 
         // Selection starts fresh
         set({
@@ -285,25 +309,49 @@ export const useAppStore = create<AppState>((set, get) => {
     setConstituencyId: async (id: number) => {
       set({ constituencyId: id, loadingConstituency: true, errorConstituency: null });
 
+      let constDetails = null;
+      try {
+        const cachedStr = await AsyncStorage.getItem(`@jagrut_const_${id}`);
+        if (cachedStr) {
+          constDetails = JSON.parse(cachedStr);
+          set({ rawConstituencyDetails: constDetails });
+          const merged = applyAllOverrides(
+            get().rawCommodities,
+            constDetails,
+            get().localPriceOverrides,
+            get().localAffidavitOverrides,
+            get().localAuditOverrides
+          );
+          set({ activeConstituencyDetails: merged.activeConstituencyDetails, loadingConstituency: false });
+        }
+      } catch (e) {
+        console.warn("Failed to load constituency cache:", e);
+      }
+
       try {
         const response = await fetch(`${API_BASE_URL}/api/constituencies/c_${id}.json`);
-        if (!response.ok) throw new Error(`Failed to fetch details for constituency ID ${id}`);
-        const data = await response.json();
-        
-        set({ rawConstituencyDetails: data });
-        
-        const merged = applyAllOverrides(
-          get().rawCommodities,
-          data,
-          get().localPriceOverrides,
-          get().localAffidavitOverrides,
-          get().localAuditOverrides
-        );
-        
-        set({ activeConstituencyDetails: merged.activeConstituencyDetails, loadingConstituency: false });
+        if (!response.ok) {
+           if (!constDetails) throw new Error(`Failed to fetch details for constituency ID ${id}`);
+        } else {
+           const data = await response.json();
+           await AsyncStorage.setItem(`@jagrut_const_${id}`, JSON.stringify(data));
+           set({ rawConstituencyDetails: data });
+           
+           const merged = applyAllOverrides(
+             get().rawCommodities,
+             data,
+             get().localPriceOverrides,
+             get().localAffidavitOverrides,
+             get().localAuditOverrides
+           );
+           
+           set({ activeConstituencyDetails: merged.activeConstituencyDetails, loadingConstituency: false });
+        }
       } catch (err: any) {
         console.error(err);
-        set({ errorConstituency: err.message || 'Failed to fetch constituency data', loadingConstituency: false });
+        if (!constDetails) {
+            set({ errorConstituency: err.message || 'Failed to fetch constituency data', loadingConstituency: false });
+        }
       }
     },
 
