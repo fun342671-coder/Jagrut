@@ -145,7 +145,8 @@ async def process_updates():
         
         # Extract user_id and compute hash
         user_id = update.message.from_user.id
-        user_hash = hashlib.sha256(str(user_id).encode()).hexdigest()
+        salt = os.getenv("SALT_KEY", "")
+        user_hash = hashlib.sha256((str(user_id) + salt).encode()).hexdigest()
 
         # Parse text messages for deep links (e.g. /start c_1)
         text = update.message.text or ""
@@ -207,7 +208,7 @@ async def process_updates():
                     img_path.unlink()
 
     # Update last run timestamp to now
-    registry["last_run_timestamp"] = now
+    registry["last_run_timestamp"] = time.time()
 
     # Evaluate consensus
     evaluate_consensus(registry)

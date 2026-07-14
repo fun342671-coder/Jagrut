@@ -22,6 +22,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install System OCR Engine
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr
+
       - name: Install Dependencies
         run: |
           pip install python-telegram-bot pytesseract Pillow
@@ -29,6 +34,7 @@ jobs:
       - name: Run Telegram Ingestion (OCR & Consensus)
         env:
           TELEGRAM_UPLOAD_BOT_TOKEN: ${{ secrets.TELEGRAM_UPLOAD_BOT_TOKEN }}
+          SALT_KEY: ${{ secrets.SALT_KEY }}
         run: |
           python data_pipeline/telegram_ingest.py
 
